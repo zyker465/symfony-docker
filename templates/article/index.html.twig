@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleController!{% endblock %}
+
+{% block main %}
+    <h1 class="mt-4">Article</h1>
+    <div class="card" style="width: 18rem;">
+        <img src="{{ asset('assets/img/ps5.webp') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{article.titre}}</h5>
+            <p class="card-text">Playstation 5 Standard Console <br>815GO SSD 4K 120FPS <br>479,99€</p>
+            <a href="#" class="btn btn-primary">Acheter</a>
+        </div>
+    </div>
+{% endblock %}

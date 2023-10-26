@@ -1,0 +1,38 @@
+{# templates/article/create_article.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un article{% endblock %}
+
+{% block main %}
+    <div class="container mt-5">
+        <form action="{{ path('app_article_cree') }}" enctype="multipart/form-data" method="post">
+            <h1>Créer un nouvel article</h1>
+            {{ form_start(form) }}
+
+            <div class="form-group">
+                {{ form_label(form.titre, 'Titre de l\'article') }}
+                {{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+            </div>
+             
+            <br> 
+
+            <div class="form-group">
+                {{ form_label(form.texte, 'Contenu de l\'article') }}
+                {{ form_widget(form.texte, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            <br> 
+
+            <div class="form-group">
+                {{ form_label(form.image, 'Image de l\'article') }}
+                {{ form_widget(form.image, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            
+            <br> 
+
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+            {{ form_end(form) }}
+        </form>
+    </div>
+{% endblock %}
